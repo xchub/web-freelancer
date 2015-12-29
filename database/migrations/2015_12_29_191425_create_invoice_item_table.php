@@ -17,9 +17,9 @@ class CreateInvoiceItemTable extends Migration
             $table->integer('invoice_id');
             $table->string('name');
             $table->string('description');
-            $table->float('cost');
-            $table->float('quantity');
-            $table->float('total');
+            $table->decimal('cost', 19, 4);
+            $table->smallInteger('quantity');
+            $table->decimal('total', 19, 4);
             $table->timestamps();
         });
     }

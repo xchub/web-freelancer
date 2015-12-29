@@ -18,7 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->integer('client_id');
             $table->date('due_date');
             $table->text('notes')->nullable();
-            $table->float('tax');
+            $table->decimal('tax', 19, 4);
             $table->boolean('recurring'); // yes or no
             $table->integer('recurring_frequency')->nullable(); // how many days between invoicing?
             $table->date('recurring_start')->nullable();
