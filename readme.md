@@ -18,7 +18,7 @@ If (hopefully!) there is some people who'd like to help on this project, please 
 Consider this a kind of roadmap for this tool.
 
 - ~~Manage clients (add, edit, delete)~~
-- Manage invoicing (create, send(?), accept payment(?), one time and recurring invoices)
+- Manage invoicing (~~list~~, create, ~~show~~, edit, delete, send(?), accept payment(?), one time and recurring invoices)
 - Manage hostings (hosting which site for which client, where, what are the terms, how much do I pay for it, how much to I charge my client, what are the infos (ip, dns, passwords, etc))
 - Manage finances (what are the expenses I have as freelancer, what are the incomes, am I in the red or filthy rich)
 - Have a better look than basic Laravel/Bootstrap
