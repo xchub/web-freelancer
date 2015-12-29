@@ -2,7 +2,7 @@
 
 namespace App\Tools;
 
-class Config
+class Configuration
 {
     public function appName()
     {

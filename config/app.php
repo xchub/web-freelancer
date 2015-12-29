@@ -161,6 +161,8 @@ return [
          * Third-party Service Providers... 
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Webpatser\Countries\CountriesServiceProvider::class,
 
     ],
 
@@ -211,11 +213,14 @@ return [
          * Custom tools
          */
         'Permissions'     => App\Facades\Permissions::class,
-        'Config'     => App\Facades\Config::class,
+        'Configuration'     => App\Facades\Configuration::class,
         /*
          * Third-party Facades... 
          */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Countries' => Webpatser\Countries\CountriesFacade::class,
 
     ],
 

@@ -4,10 +4,10 @@ namespace App\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Config extends Facade
+class Configuration extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'Config';
+        return 'Configuration';
     }
 }
