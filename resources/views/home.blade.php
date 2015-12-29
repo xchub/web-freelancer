@@ -7,3 +7,6 @@ Dashboard
 @section('content')
 You are logged in!
 @endsection
+
+@section('page_scripts')
+@endsection
