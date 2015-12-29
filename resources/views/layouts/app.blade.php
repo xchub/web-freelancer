@@ -31,9 +31,22 @@
             @include('includes.nav.header-right')
         </div>
     </nav>
-
-    @yield('content')
-
+    <div class="container spark-screen">
+        <div class="row">
+            @include('includes.nav.sidebar')
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @yield('heading')
+                </div>
+        
+                <div class="panel-body">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
