@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 use App\Client;
 use Session;
 use Redirect;
+use Countries;
 
 class ClientsController extends Controller
 {
@@ -38,7 +42,11 @@ class ClientsController extends Controller
    */
   public function create()
   {
-    
+   foreach (Countries::getList('name') as $key => $value) {
+     $countries[$key] = $value['name'];
+   }
+
+    return view('clients.create')->with('countries', $countries);
   }
 
   /**
@@ -47,9 +55,19 @@ class ClientsController extends Controller
    *
    * @return Response
    */
-  public function store()
+  public function store(Request $request)
   {
-    
+    $this->validate($request, [
+        'name' => 'required',
+        'email' => 'required|email',
+        'website' => 'url',
+    ]);
+
+    $input = $request->all();
+    $client = Client::create($input);
+    $client->save();
+
+    return Redirect::route('client.index');
   }
 
   /**
