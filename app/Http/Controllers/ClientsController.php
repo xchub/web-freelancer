@@ -67,6 +67,7 @@ class ClientsController extends Controller
     $client = Client::create($input);
     $client->save();
 
+    Session::flash('success', 'Client successfully added.');
     return Redirect::route('client.index');
   }
 

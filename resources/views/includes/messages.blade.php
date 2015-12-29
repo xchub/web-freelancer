@@ -22,7 +22,7 @@
     </div>
     @endif
 
-    @if (session('fail'))
+    @if (session('danger'))
     <div class="alert alert-danger alert-dismissable" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h3 class="font-w300 push-15">Fumble :(</h3>
