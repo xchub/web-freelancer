@@ -161,6 +161,7 @@ return [
          * Third-party Service Providers... 
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -216,6 +217,8 @@ return [
          * Third-party Facades... 
          */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
