@@ -130,8 +130,9 @@ class InvoicesController extends Controller
   public function destroy($id)
   {
       Invoice::destroy($id);
+      InvoiceItem::where('invoice_id', $id)->delete();
       Session::flash('success', 'Invoice successfully destroyed.');
 
-      return Redirect::route('invoices.index');
+      return Redirect::route('invoice.index');
   }
 }
