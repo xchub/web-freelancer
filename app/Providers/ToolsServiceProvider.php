@@ -8,7 +8,6 @@ use App\Tools\Config;
 
 class ToolsServiceProvider extends ServiceProvider
 {
-
     /**
      * Register the application services.
      *
@@ -23,6 +22,5 @@ class ToolsServiceProvider extends ServiceProvider
         $this->app->bind('Config', function () {
             return new Config;
         });
-
     }
 }
