@@ -2,15 +2,15 @@
 
 namespace App\Tools;
 
-class Config {
-
+class Config
+{
     public function appName()
     {
-       return env('APP_NAME', 'App');
+        return env('APP_NAME', 'App');
     }
 
     public function appLang()
     {
-       return env('APP_LANG', 'en');
+        return env('APP_LANG', 'en');
     }
 }
