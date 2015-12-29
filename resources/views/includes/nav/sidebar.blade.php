@@ -7,6 +7,11 @@
                 <li><a href="{{ url('/client') }}">List</a></li>
                 <li><a href="{{ url('/client/create') }}">Create</a></li>
             </ul>
+            <ul class="nav nav-sidebar">
+                <li>Invoices</li>
+                <li><a href="{{ url('/invoice') }}">List</a></li>
+                <li><a href="{{ url('/invoice/create') }}">Create</a></li>
+            </ul>
         </div>
     </div>
 </div>
