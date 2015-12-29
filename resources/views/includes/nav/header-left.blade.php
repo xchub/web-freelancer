@@ -9,6 +9,6 @@
 
     <!-- Branding Image -->
     <a class="navbar-brand" href="{{ url('/') }}">
-        {!! Config::appName() !!}
+        {!! Configuration::appName() !!}
     </a>
 </div>

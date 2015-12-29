@@ -5,7 +5,7 @@
             <ul class="nav nav-sidebar">
                 <li>Clients</li>
                 <li><a href="{{ url('/client') }}">List</a></li>
-                <li><a href="#">Add new</a></li>
+                <li><a href="{{ url('/client/create') }}">Create</a></li>
             </ul>
         </div>
     </div>
