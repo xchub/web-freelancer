@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Tools\Permissions;
-use App\Tools\Config;
+use App\Tools\Configuration;
 
 class ToolsServiceProvider extends ServiceProvider
 {
@@ -19,8 +19,8 @@ class ToolsServiceProvider extends ServiceProvider
             return new Permissions;
         });
 
-        $this->app->bind('Config', function () {
-            return new Config;
+        $this->app->bind('Configuration', function () {
+            return new Configuration;
         });
     }
 }
