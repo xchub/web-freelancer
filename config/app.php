@@ -211,6 +211,7 @@ return [
          * Custom tools
          */
         'Permissions'     => App\Facades\Permissions::class,
+        'Config'     => App\Facades\Config::class,
         /*
          * Third-party Facades... 
          */
