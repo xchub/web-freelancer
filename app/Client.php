@@ -28,4 +28,13 @@ class Client extends Model
     {
         return $this->hasMany('App\User');
     }
+
+    public function invoices()
+    {
+        return $this->hasMany('App\Invoice');
+    }
+
+    public function country(){
+        return $this->belongsTo('App\Country');
+    }
 }
