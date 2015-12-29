@@ -29,3 +29,14 @@
         <p>{{ session('fail') }}</p>
     </div>
     @endif
+
+    @if (count($errors) > 0)
+    <div class="alert alert-danger" role="alert">
+        <h3 class="font-w300 push-15">Fumble :(</h3>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
