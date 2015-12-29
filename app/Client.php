@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Client extends Model
 {
     /**
@@ -12,7 +13,7 @@ class Client extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'name', 'contact', 'email', 'website', 'phone', 'address', 'city', 'country',
+        'user_id', 'name', 'contact', 'email', 'website', 'phone', 'address', 'city', 'country_id',
     ];
 
     /**
