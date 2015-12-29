@@ -2,7 +2,9 @@
 
 namespace App;
 
-class Client
+use Illuminate\Database\Eloquent\Model;
+
+class Client extends Model
 {
     /**
      * The attributes that are mass assignable.
