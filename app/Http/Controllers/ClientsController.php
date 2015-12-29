@@ -93,7 +93,12 @@ class ClientsController extends Controller
    */
   public function edit($id)
   {
-    
+    foreach (Countries::getList('name') as $key => $value) {
+     $countries[$key] = $value['name'];
+   }
+
+    $client = Client::findOrFail($id);
+    return view('clients.edit')->with('id', $id)->with('client', $client)->with('countries', $countries);
   }
 
   /**
@@ -103,8 +108,20 @@ class ClientsController extends Controller
    * @param  int  $id
    * @return Response
    */
-  public function update($id)
+  public function update(Request $request, $id)
   {
+    $this->validate($request, [
+        'name' => 'required',
+        'email' => 'required|email',
+        'website' => 'url',
+    ]);
+
+    $input = $request->all();
+    $client = Client::findOrFail($id);
+    $client->fill($input)->save();
+
+    Session::flash('success', 'Client modification saved!');
+    return Redirect::route('client.show', ['id' => $id]);
     
   }
 

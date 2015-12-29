@@ -22,7 +22,7 @@ Clients
         @else
         <td></td>
         @endif
-        <td><a href="{!! URL::action('ClientsController@show', ['id' => $client->id]) !!}" ><span class="glyphicon glyphicon-eye-open" /></span></a> <a href="{!! URL::action('ClientsController@destroy', ['id' => $client->id]) !!}" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Are you sure?"><span class="glyphicon glyphicon-trash" /></span></a></td>
+        <td><a href="{!! URL::action('ClientsController@show', ['id' => $client->id]) !!}" ><span class="glyphicon glyphicon-eye-open" /></span></a> <a href="{!! URL::action('ClientsController@edit', ['id' => $client->id]) !!}" ><span class="glyphicon glyphicon-edit" /></span></a> <a href="{!! URL::action('ClientsController@destroy', ['id' => $client->id]) !!}" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Are you sure?"><span class="glyphicon glyphicon-trash" /></span></a></td>
 
     </tr>
     @endforeach

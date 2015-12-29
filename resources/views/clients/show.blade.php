@@ -33,7 +33,9 @@ Show a client
 
 <div>
     <p>
-        <button type="button" class="btn btn-xs btn-default">Edit</button>
+        <a href="{!! URL::action('ClientsController@edit', ['id' => $client->id]) !!}">
+            <button type="button" class="btn btn-xs btn-default">Edit</button>
+        </a>
         <a href="{!! URL::action('ClientsController@destroy', ['id' => $client->id]) !!}" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Are you sure?">
             <button type="button" class="btn btn-xs btn-danger">Delete</button>
         </a>
