@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-
 class Client extends Model
 {
     /**
@@ -22,7 +21,7 @@ class Client extends Model
      * @var array
      */
     protected $hidden = [
-        
+
     ];
 
     public function users()
