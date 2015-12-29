@@ -22,11 +22,15 @@ Clients
         @else
         <td></td>
         @endif
-        <td> ... </td>
+        <td><a href="{!! URL::action('ClientsController@destroy', ['id' => $client->id]) !!}" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Are you sure?"><i class="glyphicon glyphicon-trash" /></a></td>
     </tr>
     @endforeach
 </table>
 
 {!! $clients->links() !!}
 
+@endsection
+
+@section('page_scripts')
+<script src="/js/fake-delete-request.js"></script>
 @endsection

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use Session;
+use Redirect;
 
 class ClientsController extends Controller
 {
@@ -95,6 +97,10 @@ class ClientsController extends Controller
    */
   public function destroy($id)
   {
+
+    Client::destroy($id);
+    Session::flash('success', 'Client successfully destroyed.');
+    return Redirect::route('client.index');
     
   }
 }
