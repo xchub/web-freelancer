@@ -155,6 +155,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ToolsServiceProvider::class,
 
         /*
          * Third-party Service Providers... 
@@ -206,6 +207,10 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        /*
+         * Custom tools
+         */
+        'Permissions'     => App\Facades\Permissions::class,
         /*
          * Third-party Facades... 
          */
