@@ -28,4 +28,9 @@ class Invoice extends Model
     {
         return $this->hasMany('App\InvoiceItem');
     }
+
+    public function client()
+    {
+        return $this->belongsTo('App\Client');
+    }
 }
